@@ -135,7 +135,7 @@
           
           <!-- Tête de liste -->
           <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-republic-blue border-2 group md:col-span-2 md:row-span-2">
-            <div class="relative overflow-hidden h-64 bg-slate-200">
+            <div class="relative overflow-hidden h-128 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Francois Dizier" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
               <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tête de liste</div>
             </div>
@@ -154,6 +154,7 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Cédric Regli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">1er Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Cédric Regli</h3>
@@ -165,6 +166,7 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Xavière Michelot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">2eme adjointe</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Xavière Michelot</h3>
@@ -176,6 +178,7 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Killian L'homme" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">3eme Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Killian L'homme</h3>
@@ -187,6 +190,7 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Anne-Laure Francoz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">4eme adjointe</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Anne-Laure Francoz</h3>
@@ -198,6 +202,7 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Simon Desseigne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">5eme Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Simon Desseigne</h3>
@@ -263,7 +268,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/no-profile.jpeg" alt="Clément Fouque" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/clement.jpeg" alt="Clément Fouque" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Clément Fouque</h3>
@@ -580,76 +585,13 @@
         // Scroll Effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark-bg/95', 'backdrop-blur-sm', 'border-gray-800', 'shadow-lg', 'py-3');
-                navbar.classList.remove('py-5', 'bg-transparent', 'border-transparent');
+                navbar.classList.add('bg-republic-blue/95', 'backdrop-blur-sm', 'shadow-lg', 'py-2');
+                navbar.classList.remove('py-4', 'bg-transparent');
             } else {
-                navbar.classList.add('py-5', 'bg-transparent', 'border-transparent');
-                navbar.classList.remove('bg-dark-bg/95', 'backdrop-blur-sm', 'border-gray-800', 'shadow-lg', 'py-3');
+                navbar.classList.add('py-4', 'bg-transparent');
+                navbar.classList.remove('bg-republic-blue/95', 'backdrop-blur-sm', 'shadow-lg', 'py-2');
             }
         });
-
-        // Mobile Menu Toggle
-        <!-- mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-xmark');
-                // Ensure navbar background is solid when menu is open
-                if (window.scrollY <= 50) {
-                     navbar.classList.add('bg-dark-bg');
-                     navbar.classList.remove('bg-transparent');
-                }
-            } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
-                 // Revert navbar background if at top
-                 if (window.scrollY <= 50) {
-                     navbar.classList.remove('bg-dark-bg');
-                     navbar.classList.add('bg-transparent');
-                }
-            }
-        });
-
-        // Close Mobile Menu on Link Click
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
-            });
-        });
-
-        // Gallery Filter Logic
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update buttons UI
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-brand', 'text-gray-900', 'active', 'shadow-lg');
-                    b.classList.add('bg-transparent', 'text-gray-300', 'border-gray-600');
-                });
-                btn.classList.remove('bg-transparent', 'text-gray-300', 'border-gray-600');
-                btn.classList.add('bg-brand', 'text-gray-900', 'active', 'shadow-lg');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                // Filter items
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.classList.remove('hidden-item');
-                        item.classList.add('visible-item');
-                        // Small timeout to allow transition if needed, though simple block/none works for static
-                    } else {
-                        item.classList.remove('visible-item');
-                        item.classList.add('hidden-item');
-                    }
-                });
-            });
-        }); -->
     </script>
   </body>
 </html>
