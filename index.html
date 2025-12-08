@@ -27,8 +27,8 @@
               serif: ['Playfair Display', 'serif'],
             },
             colors: {
-              'republic-blue': '#002654',
-              'republic-red': '#ED2939',
+              'republic-blue': '#023047',
+              'republic-red': '#fb8500',
               'slate-custom': '#334155',
             }
           }
@@ -60,7 +60,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-republic-blue p-2 bg-white rounded-md shadow-sm">
+        <button id="mobile-menu-btn" class="md:hidden text-republic-blue p-2 bg-white rounded-md shadow-sm transition-colors">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
@@ -132,29 +132,21 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          
-          <!-- Tête de liste -->
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-republic-blue border-2 group md:col-span-2 md:row-span-2">
-            <div class="relative overflow-hidden h-128 bg-slate-200">
+          <!-- Candidates -->          
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Francois Dizier" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tête de liste</div>
             </div>
             <div class="p-4">
-              <h3 class="font-bold text-republic-blue text-2xl">Francois Dizier</h3>
+              <h3 class="font-bold text-republic-blue text-lg">Francois Dizier</h3>
               <p class="text-slate-500 font-medium mb-1">Sapeur pompier</p>
-              <div class="flex items-center text-slate-400 text-sm mt-2">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Grillon
-              </div>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Grillon</div>
             </div>
           </div>
 
-          <!-- Other Candidates -->
-          <!-- Generated static blocks for the remaining 18 candidates -->
-          
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Cédric Regli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">1er Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Cédric Regli</h3>
@@ -166,7 +158,6 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Xavière Michelot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">2eme adjointe</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Xavière Michelot</h3>
@@ -178,7 +169,6 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Killian L'homme" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">3eme Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Killian L'homme</h3>
@@ -190,7 +180,6 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Anne-Laure Francoz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">4eme adjointe</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Anne-Laure Francoz</h3>
@@ -202,7 +191,6 @@
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
               <img src="public/img/no-profile.jpeg" alt="Simon Desseigne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">5eme Adjoint</div>
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Simon Desseigne</h3>
@@ -406,10 +394,6 @@
               </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Création de comités de quartier.</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
                 <span>Permanences régulières des élus.</span>
               </li>
             </ul>
@@ -426,10 +410,6 @@
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
                 <span>Soutien aux commerces de proximité.</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Animations culturelles au chef-lieu.</span>
               </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
@@ -454,10 +434,6 @@
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
                 <span>Actions intergénérationnelles.</span>
               </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Renforcement des aides du CCAS.</span>
-              </li>
             </ul>
           </div>
 
@@ -469,10 +445,6 @@
             <h3 class="text-xl font-bold text-slate-800 mb-3">Vie Associative</h3>
             <p class="text-slate-600 mb-6 italic">Le cœur battant de Choisy.</p>
             <ul class="space-y-2">
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Subventions équitables pour les associations.</span>
-              </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
                 <span>Mise à disposition de locaux adaptés.</span>
@@ -492,14 +464,6 @@
             <h3 class="text-xl font-bold text-slate-800 mb-3">Jeunesse & École</h3>
             <p class="text-slate-600 mb-6 italic">Investir dans l'avenir de nos enfants.</p>
             <ul class="space-y-2">
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Sécurisation des abords de l'école.</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Activités périscolaires enrichies.</span>
-              </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
                 <span>Projets pédagogiques en lien avec la commune.</span>
@@ -563,10 +527,9 @@
             <h3 class="text-white text-lg font-bold mb-4">Mentions Légales</h3>
             <p class="text-sm text-slate-500 mb-4">
               Site de campagne officiel pour les élections municipales de Choisy (Haute-Savoie). 
-              Ne pas jeter sur la voie publique.
             </p>
             <p class="text-sm text-slate-600">
-              &copy; 2026 Choisy 2026 - Tous droits réservés.
+              &copy; 2026 Choisy2026.fr - Tous droits réservés.
             </p>
           </div>
         </div>
@@ -580,20 +543,73 @@
 
         // Navbar Logic
         const navbar = document.getElementById('navbar');
+        const navLogoText = document.getElementById('nav-logo-text');
+        const navLinks = document.querySelectorAll('.nav-link');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         // Scroll Effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('bg-republic-blue/95', 'backdrop-blur-sm', 'shadow-lg', 'py-2');
+                // Scrolled state: White background, dark text
+                navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-2');
                 navbar.classList.remove('py-4', 'bg-transparent');
+                
+                // Update Logo Text
+                if (navLogoText) {
+                    navLogoText.classList.remove('text-white', 'drop-shadow-md');
+                    navLogoText.classList.add('text-republic-blue');
+                }
+
+                // Update Nav Links
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'drop-shadow-md', 'hover:text-blue-200');
+                    link.classList.add('text-slate-700', 'hover:text-republic-blue');
+                });
+                
+                // Update Mobile Menu Button (invert colors to stand out on white)
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.classList.remove('bg-white', 'text-republic-blue');
+                    mobileMenuBtn.classList.add('bg-republic-blue', 'text-white');
+                }
             } else {
+                // Initial state: Transparent background, white text
                 navbar.classList.add('py-4', 'bg-transparent');
-                navbar.classList.remove('bg-republic-blue/95', 'backdrop-blur-sm', 'shadow-lg', 'py-2');
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-2');
+
+                // Revert Logo Text
+                if (navLogoText) {
+                    navLogoText.classList.add('text-white', 'drop-shadow-md');
+                    navLogoText.classList.remove('text-republic-blue');
+                }
+
+                // Revert Nav Links
+                navLinks.forEach(link => {
+                    link.classList.add('text-white', 'drop-shadow-md', 'hover:text-blue-200');
+                    link.classList.remove('text-slate-700', 'hover:text-republic-blue');
+                });
+                
+                // Revert Mobile Menu Button
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.classList.add('bg-white', 'text-republic-blue');
+                    mobileMenuBtn.classList.remove('bg-republic-blue', 'text-white');
+                }
             }
+        });
+
+        // Mobile Menu Toggle
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu) mobileMenu.classList.add('hidden');
+            });
         });
     </script>
   </body>
