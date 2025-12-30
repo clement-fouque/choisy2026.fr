@@ -14,9 +14,6 @@
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
     <!-- Tailwind Config -->
     <script>
       tailwind.config = {
@@ -35,6 +32,47 @@
         }
       }
     </script>
+
+    <!-- Custom Styles (Merged from style.css) -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Ensure icons align nicely in lists */
+      .lucide {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* Mobile menu transition */
+      #mobile-menu {
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Navbar transparency transition handled via JS classes, but basic state here */
+      #navbar {
+        transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+      }
+
+      /* Hover effects for candidates */
+      .candidate-card:hover img {
+        transform: scale(1.1);
+        filter: grayscale(0%);
+      }
+
+      .candidate-card img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease, transform 0.5s ease;
+      }
+      
+      /* Additional polish for the program cards */
+      .program-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body class="bg-slate-50 font-sans text-slate-800">
 
@@ -135,7 +173,7 @@
           <!-- Candidates -->          
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/francois.jpeg" alt="Francois Dizier" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/francois.jpeg" alt="Francois Dizier" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Francois Dizier</h3>
@@ -146,7 +184,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/cedric.jpg" alt="Cédric Regli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/cedric.jpg" alt="Cédric Regli" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Cédric Regli</h3>
@@ -157,7 +195,7 @@
 
            <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/anne_laure.jpg" alt="Anne-Laure Francoz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/anne_laure.jpg" alt="Anne-Laure Francoz" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Anne-Laure Francoz</h3>
@@ -168,20 +206,18 @@
          
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/killian.jpg" alt="Killian L'homme" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/killian.jpg" alt="Killian L'homme" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Killian L'homme</h3>
-              <p class="text-slate-500 font-medium mb-1">Agent de la fonction publique territoriale - Communauté de communes Fier et Usses</p>
+              <p class="text-slate-500 font-medium mb-1">Agent de la fonction publique territoriale</p>
               <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Véry</div>
             </div>
           </div>
 
-         
-
            <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/xaviere.jpg" alt="Xavière Michelot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/xaviere.jpg" alt="Xavière Michelot" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Xavière Michelot</h3>
@@ -192,7 +228,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/olivier.jpg" alt="Olivier Miguet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/olivier.jpg" alt="Olivier Miguet" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Olivier Miguet</h3>
@@ -203,7 +239,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/jacqueline.jpg" alt="Jacqueline Ceccon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/jacqueline.jpg" alt="Jacqueline Ceccon" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Jacqueline Ceccon</h3>
@@ -214,18 +250,18 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/simon.jpg" alt="Simon Desseigne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/simon.jpg" alt="Simon Desseigne" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Simon Desseigne</h3>
-              <p class="text-slate-500 font-medium mb-1">Entrepreneur indépendant – Ingénierie fluviale, art & immobilier</p>
+              <p class="text-slate-500 font-medium mb-1">Entrepreneur indépendant</p>
               <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Combes</div>
             </div>
           </div>
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/aurore.jpeg" alt="Aurore Mossière" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/aurore.jpeg" alt="Aurore Mossière" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Aurore Mossière</h3>
@@ -236,7 +272,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/clement.jpeg" alt="Clément Fouque" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/clement.jpeg" alt="Clément Fouque" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Clément Fouque</h3>
@@ -247,7 +283,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/sylvie.jpg" alt="Sylvie Auroy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/sylvie.jpg" alt="Sylvie Auroy" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Sylvie Auroy</h3>
@@ -258,40 +294,40 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/kevin.jpg" alt="Kevin Zamora" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/kevin.jpg" alt="Kevin Zamora" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Kevin Zamora</h3>
-              <p class="text-slate-500 font-medium mb-1">Responsable marché au sein d'un négoce de bois</p>
+              <p class="text-slate-500 font-medium mb-1">Responsable marché négoce bois</p>
               <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Bourgeois</div>
             </div>
           </div>
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/gwenaelle.jpg" alt="Gwenaelle Alexandre" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/gwenaelle.jpg" alt="Gwenaelle Alexandre" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Gwenaelle Alexandre</h3>
-              <p class="text-slate-500 font-medium mb-1">Ingénieure, Responsable de projets techniques</p>
+              <p class="text-slate-500 font-medium mb-1">Ingénieure, Responsable projets</p>
               <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Megevands</div>
             </div>
           </div>
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/cyril.jpg" alt="Cyril Masson" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/cyril.jpg" alt="Cyril Masson" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Cyril Masson</h3>
-              <p class="text-slate-500 font-medium mb-1">Agent de sécurité armé milieu diplomatique</p>
+              <p class="text-slate-500 font-medium mb-1">Agent de sécurité</p>
               <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Rossy</div>
             </div>
           </div>
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/marion.jpg" alt="Marion Sagnol Mousset" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/marion.jpg" alt="Marion Sagnol Mousset" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Marion Sagnol Mousset</h3>
@@ -302,7 +338,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/jean_luc.jpeg" alt="Jean-Luc Giacometti" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/jean_luc.jpeg" alt="Jean-Luc Giacometti" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Jean-Luc Giacometti</h3>
@@ -313,7 +349,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/pauline.jpg" alt="Pauline Bolard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/pauline.jpg" alt="Pauline Bolard" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Pauline Bolard</h3>
@@ -324,7 +360,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/paule.jpg" alt="Paule Bossert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/paule.jpg" alt="Paule Bossert" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Paule Bossert</h3>
@@ -335,7 +371,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
             <div class="relative overflow-hidden h-48 bg-slate-200">
-              <img src="public/img/profiles/andreas.jpg" alt="Andréas Handlbauer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <img src="public/img/profiles/andreas.jpg" alt="Andréas Handlbauer" class="w-full h-full object-cover" />
             </div>
             <div class="p-4">
               <h3 class="font-bold text-republic-blue text-lg">Andréas Handlbauer</h3>
@@ -354,121 +390,85 @@
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Que souhaite faire notre liste ?</h2>
           <div class="w-24 h-1 bg-republic-red mx-auto rounded"></div>
-          <p class="mt-4 text-slate-600">Nos engagements concrets pour le mandat à venir.</p>
+          <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Ce programme est en cours de construction avec les habitants de Choisy. Nous solliciterons vos avis et idées tout au long du mandat si nous sommes élus.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
-          <!-- Transparence -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="file-search" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Transparence</h3>
-            <p class="text-slate-600 mb-6 italic">Une gestion claire et transparente des affaires communales.</p>
-            <ul class="space-y-2">
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Audit financier complet (budget, dettes).</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Communication régulière sur les décisions.</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Accès facilité aux documents municipaux.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Démocratie Citoyenne -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <!-- Communication citoyenne -->
+          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="message-circle" class="w-7 h-7"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Démocratie Citoyenne</h3>
-            <p class="text-slate-600 mb-6 italic">Vous donner la parole sur les grands projets.</p>
-            <!-- <ul class="space-y-2">
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Communication citoyenne</h3>
+            <p class="text-slate-600 mb-6 italic">Une mairie à l'écoute et transparente.</p>
+            <!-- <ul class="space-y-2 mt-auto">
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Consultation citoyenne avant les grands travaux.</span>
+                <span>Transparence des décisions municipales.</span>
               </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Permanences régulières des élus.</span>
+                <span>Dialogue régulier avec les habitants.</span>
               </li>
             </ul> -->
           </div>
 
-          <!-- Dynamisation -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <!-- Patrimoine immobilier et naturel -->
+          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="store" class="w-7 h-7"></i>
+              <i data-lucide="landmark" class="w-7 h-7"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Dynamisation</h3>
-            <p class="text-slate-600 mb-6 italic">Pérenniser notre chef-lieu et nos commerces.</p>
-            <!-- <ul class="space-y-2">
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Patrimoine immobilier et naturel</h3>
+            <p class="text-slate-600 mb-6 italic">Préserver nos bâtiments et notre environnement.</p>
+            <!-- <ul class="space-y-2 mt-auto">
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Soutien aux commerces de proximité.</span>
+                <span>Entretien et valorisation des bâtiments communaux.</span>
               </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Poursuivre l'effort de dynamisation.</span>
+                <span>Protection de nos espaces naturels.</span>
               </li>
             </ul> -->
           </div>
 
-          <!-- Social & CCAS -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <!-- Cohésion sociale et intergénérationnelle -->
+          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="heart-handshake" class="w-7 h-7"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Social & CCAS</h3>
-            <p class="text-slate-600 mb-6 italic">Solidarité envers nos aînés et les plus fragiles.</p>
-            <!-- <ul class="space-y-2">
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Cohésion sociale et intergénérationnelle</h3>
+            <p class="text-slate-600 mb-6 italic">Unir les générations et soutenir les plus fragiles.</p>
+            <!-- <ul class="space-y-2 mt-auto">
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Repas des aînés convivial et qualitatif.</span>
+                <span>Actions solidaires pour nos aînés.</span>
               </li>
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Actions intergénérationnelles.</span>
-              </li>
-            </ul> -->
-          </div>
-
-          <!-- Vie Associative -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="users" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Vie Associative</h3>
-            <p class="text-slate-600 mb-6 italic">Le cœur battant de Choisy.</p>
-            <!-- <ul class="space-y-2">
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Mise à disposition de locaux adaptés.</span>
-              </li>
-              <li class="flex items-start text-sm text-slate-700">
-                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Aide logistique pour les événements.</span>
+                <span>Projets liant jeunesse et anciens.</span>
               </li>
             </ul> -->
           </div>
 
-          <!-- Jeunesse & École -->
-          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <!-- Nos entrepreneurs, nos commercants, nos agriculteurs -->
+          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="school" class="w-7 h-7"></i>
+              <i data-lucide="store" class="w-7 h-7"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Jeunesse & École</h3>
-            <p class="text-slate-600 mb-6 italic">Investir dans l'avenir de nos enfants.</p>
-            <!-- <ul class="space-y-2">
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Nos entrepreneurs, nos commerçants, nos agriculteurs</h3>
+            <p class="text-slate-600 mb-6 italic">Soutenir l'économie locale et nos producteurs.</p>
+            <!-- <ul class="space-y-2 mt-auto">
               <li class="flex items-start text-sm text-slate-700">
                 <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
-                <span>Projets pédagogiques en lien avec la commune.</span>
+                <span>Soutien aux initiatives locales.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Valorisation de l'agriculture locale.</span>
               </li>
             </ul> -->
           </div>
@@ -503,14 +503,6 @@
                 <i data-lucide="mail" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
                 <a href="mailto:contact@choisypourtous.fr" class="hover:text-white transition-colors">contact@choisypourtous.fr</a>
               </li>
-              <!-- <li class="flex items-center">
-                <i data-lucide="phone" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
-                <span>06 12 34 56 78</span>
-              </li>
-              <li class="flex items-center">
-                <i data-lucide="map-pin" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
-                <span>Permanence : Salle des Fêtes<br/>Tous les jeudis 18h-20h</span>
-              </li> -->
             </ul>
           </div>
 
