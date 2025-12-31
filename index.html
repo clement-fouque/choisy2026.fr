@@ -501,8 +501,16 @@
             <h3 class="text-white text-lg font-bold mb-4">Nous Contacter</h3>
             <ul class="space-y-3">
               <li class="flex items-center">
-                <i data-lucide="mail" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
-                <a href="mailto:contact@choisypourtous.fr" class="hover:text-white transition-colors">contact@choisypourtous.fr</a>
+                <i data-lucide="mail" class="w-4.5 h-4.5 mr-3 text-republic-red flex-shrink-0"></i>
+                <a href="mailto:contact@choisypourtous.fr" class="hover:text-white transition-colors mr-2">contact@choisypourtous.fr</a>
+                <button onclick="copyEmail()" class="text-slate-500 hover:text-white transition-colors p-1 rounded" title="Copier l'email">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+                <span id="copy-feedback" class="text-xs text-green-400 ml-2 opacity-0 transition-opacity duration-300">Copié !</span>
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="facebook" class="w-4.5 h-4.5 mr-3 text-republic-red flex-shrink-0"></i>
+                <a href="https://www.facebook.com/profile.php?id=61585296192309" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Suivez-nous sur Facebook</a>
               </li>
             </ul>
           </div>
@@ -606,6 +614,27 @@
                 if (mobileMenu) mobileMenu.classList.add('hidden');
             });
         });
+
+        // Copy Email Function
+        function copyEmail() {
+            const email = 'contact@choisypourtous.fr';
+            // Create a temporary input element
+            const tempInput = document.createElement('input');
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Show feedback
+            const feedback = document.getElementById('copy-feedback');
+            if (feedback) {
+                feedback.classList.remove('opacity-0');
+                setTimeout(() => {
+                    feedback.classList.add('opacity-0');
+                }, 2000);
+            }
+        }
     </script>
   </body>
 </html>
